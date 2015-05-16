@@ -59,9 +59,9 @@
 
         <div ng-style="{'height' : screenshot.regression.height}">
 
-          <img class="diff-image" ng-show="showDiff" ng-src="{{ screenshot.diff.self }}?access_token={{ accessToken }}" />
+          <img class="diff-image" ng-show="showDiff" ng-src="{{ screenshot.diff.self }}" />
 
-          <before-after-image-slider ng-hide="showDiff" first="{{ screenshot.baseline.self }}?access_token={{ accessToken }}" second="{{ screenshot.regression.self }}?access_token={{ accessToken }}" width="{{ screenshot.regression.width }}" height="{{ screenshot.regression.height }}"></before-after-image-slider>
+          <before-after-image-slider ng-hide="showDiff" baseline="{{ screenshot.baseline }}" regression="{{ screenshot.regression }}"></before-after-image-slider>
         </div>
 
       </li>
